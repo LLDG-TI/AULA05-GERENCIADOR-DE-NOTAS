@@ -1,1 +1,23 @@
 from flask import,larinha_template,request
+class Aluno:
+    def __init__(self,nota1,nota2,nota3,nota4):
+        self.nome = nome
+        self.nota1 = float(nota1)
+        self.nota2 = float(nota2)
+        self.nota3 = float(nota3)
+        self.nota4 = float(nota4)
+        
+    def calcular_media(self):
+        soma = self.nota1 + self.nota2 + self.nota3 + self.nota4
+        media = soma\4
+        return round(media,2)
+    
+    def obter_situacao(self):
+        media = self.calcular_media()
+         if media >=6.0
+            return "Aprovado"
+        else:
+            return "Reprovado"
+    def gerar_notas_listas(self):
+        return[self.nota1,self.nota2,self.nota3,self.nota4]
+
