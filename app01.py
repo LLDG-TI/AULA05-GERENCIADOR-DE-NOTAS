@@ -21,7 +21,7 @@ class Aluno:
     def gerar_notas_listas(self):
         return[self.nota1,self.nota2,self.nota3,self.nota4]
 BASE_DIR = os.path.dirname(os.abspath(__file__))
-TEMPLATW_DIR = os.path.join(
+TEMPLATE_DIR = os.path.join(
     BASE_DIR,"gerenciador_notas","gerenciador_notas","templates"
     )
 STATIC_DIR = os.path.join(
