@@ -33,4 +33,11 @@ def index():
   resultado = None #Enquanto não houver envio de formulário, não há resultado
 
   if request.methods == "POST":
- 
+     nome = request.form.get("nome")
+     nota1 = request.form.get("nota1")
+     nota2 = request.form.get("nota2")
+     nota3 = request.form.get("nota3")
+     nota4 = request.form.get("nota4")
+
+     aluno = Aluno(nome, nota1, nota2, nota3, nota4)
+     media = aluno.calcular_media()
