@@ -41,3 +41,18 @@ def index():
 
      aluno = Aluno(nome, nota1, nota2, nota3, nota4)
      media = aluno.calcular_media()
+     situacao = aluno.obter_situacao()
+
+     resultado = {
+
+      "nome": aluno.nome,
+      "notas": aluno.gerar_notas_lista(),
+      "media": media,
+      "situacao": situacao,
+}
+
+return render_template("index.html", resultado=resultado)
+
+if __name__ =="__main__ ":
+
+  app.run(debug=True)
