@@ -20,4 +20,17 @@ class Aluno:
             return "Reprovado"
     def gerar_notas_listas(self):
         return[self.nota1,self.nota2,self.nota3,self.nota4]
+BASE_DIR = os.path.dirname(os.abspath(__file__))
+TEMPLATW_DIR = os.path.join(
+    BASE_DIR,"gerenciador_notas","gerenciador_notas","templates"
+    )
+STATIC_DIR = os.path.join(
+     BASE_DIR,"gerenciador_notas","gerenciador_notas","static"
+    )
+app = Flask(__name__, template_folder=TEMPLATE_DIR,static_folder=STATIC_DIR)
+@app.route("\",methods=["GET","POST"])
+def index():
+  resultado = None #Enquanto não houver envio de formulário, não há resultado
 
+  if request.methods == "POST":
+ 
